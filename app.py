@@ -63,10 +63,10 @@ st.markdown("""
         color: #aaaaaa !important;
     }
 </style>
-""", unsafe_gradient=True)
+""", unsafe_allow_html=True)
 
 # 1. Initialize Constants
-EMOJIS = ["🍎", "🥑", "🍌", "🍒", "🍇", "🍉", "🍍", "🥝"]
+EMOJIS = ["👾", "🕹️", "🚀", "🤖", "💿", "🔋", "📟", "🌌"]
 BOARD_SIZE = len(EMOJIS) * 2  # 16 cards total (4x4 grid)
 
 # 2. Initialize Session State Variables
