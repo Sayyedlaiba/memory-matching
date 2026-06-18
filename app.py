@@ -25,7 +25,7 @@ st.markdown("""
     
     /* Target Streamlit buttons to turn them into game cards */
     div.stButton > button {
-        background-color: #2a2a40;
+        background-color: #2f2f99;
         color: #ffffff !important;
         border: 2px solid #444466;
         border-radius: 12px;
