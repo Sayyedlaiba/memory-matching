@@ -6,6 +6,64 @@ import time
 st.set_page_config(page_title="Memory Match Game", page_icon="🧠", layout="centered")
 st.title("🧠 Memory Matching Game")
 st.write("Find all the matching pairs! Click two cards to flip them.")
+# Custom CSS for a beautiful, modern game look
+st.markdown("""
+<style>
+    /* Change the main app background to a dark, sleek arcade theme */
+    .stApp {
+        background: linear-gradient(135deg, #1e1e2f 0%, #111119 100%);
+        color: #ffffff;
+    }
+    
+    /* Style the main title */
+    h1 {
+        font-family: 'Courier New', Courier, monospace;
+        color: #00ffcc !important;
+        text-shadow: 0px 0px 10px rgba(0, 255, 204, 0.6);
+        text-align: center;
+    }
+    
+    /* Target Streamlit buttons to turn them into game cards */
+    div.stButton > button {
+        background-color: #2a2a40;
+        color: #ffffff !important;
+        border: 2px solid #444466;
+        border-radius: 12px;
+        height: 80px;
+        font-size: 2rem !important; /* Make emojis big */
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+    }
+    
+    /* Hover effect for unselected cards */
+    div.stButton > button:hover:not(:disabled) {
+        border-color: #00ffcc;
+        background-color: #333352;
+        transform: translateY(-3px);
+        box-shadow: 0px 8px 15px rgba(0, 255, 204, 0.3);
+    }
+    
+    /* Style disabled buttons (Matched or active cards) */
+    div.stButton > button:disabled {
+        background-color: #1a3a3a !important;
+        border-color: #00ffcc !important;
+        color: #ffffff !important;
+        opacity: 1 !important; /* Prevents Streamlit's default washed-out look */
+    }
+
+    /* Style the metric/score counter */
+    [data-testid="stMetricValue"] {
+        font-size: 2.5rem !important;
+        color: #ff007f !important;
+        font-weight: bold;
+        text-shadow: 0px 0px 8px rgba(255, 0, 127, 0.5);
+    }
+    
+    [data-testid="stMetricLabel"] {
+        color: #aaaaaa !important;
+    }
+</style>
+""", unsafe_gradient=True)
 
 # 1. Initialize Constants
 EMOJIS = ["🍎", "🥑", "🍌", "🍒", "🍇", "🍉", "🍍", "🥝"]
